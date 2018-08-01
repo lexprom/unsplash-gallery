@@ -5,7 +5,8 @@
   "main": "index.js",
   "author": "Lex Park",
   "scripts": {
-    "start": "webpack-dev-server --hot --mode development"
+    "start": "webpack-dev-server --hot --mode development",
+    "build": "webpack"
   },
   "license": "MIT",
   "private": false,
