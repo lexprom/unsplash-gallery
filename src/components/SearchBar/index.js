@@ -19,13 +19,8 @@ class Search extends React.Component {
         const { imageStore } = this.props;
         return (
             <SearchBar value={imageStore.inputValue} onChange={this.handleChange} onRequestSearch={this.onClick} style={{
-                margin: '0 auto',
-                width: 350
+                margin: '0 auto'
               }}/>
-            /*<Form>
-                <Input placeholder='Search' value={imageStore.inputValue} onChange={this.handleChange} />
-                <Button type='button' disabled={!imageStore.inputValue} onClick={this.onClick}></Button>
-            </Form>*/
         )
     }
 }

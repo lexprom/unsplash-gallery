@@ -25,12 +25,13 @@ class ImageStore {
     @action async fetchImages() {
         this.links.clear();
         this.status = 'pending';
-        this.setPage();
-        const url = `https://api.unsplash.com/search/photos?page=${this.page}&query=${this.inputValue}&client_id=${this.ACCESS_KEY}`;
+        //this.setPage();
+        const url = `https://api.unsplash.com/search/photos?per_page=30&query=${this.inputValue}&client_id=${this.ACCESS_KEY}`;
         try {
             const rawImages = await fetch(url);
             const jsonImages = await rawImages.json();
-            let imagesLinks = jsonImages.results.map(el => el.urls.small);
+            console.log(jsonImages)
+            let imagesLinks = jsonImages.results.map(el => el.urls.regular);
             runInAction(() => {
                 this.links.replace(imagesLinks);
                 this.status = 'done';

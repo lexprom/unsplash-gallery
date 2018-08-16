@@ -21,14 +21,3 @@ export const Input = styled.input`
         transition: .5s;
       }
 `;
-
-
-export const Button = styled.button`
-      {
-      background-image: url('./assets/search.svg');
-      cursor: pointer;
-      position: relative;
-      top: 0;
-      right: 1.5rem;
-      }
-`;
