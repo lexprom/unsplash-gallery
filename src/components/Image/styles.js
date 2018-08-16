@@ -14,7 +14,7 @@ export const Img = styled.img`
         margin-right: 16px;
         height: 259px;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 768px) and (min-width: 400px) {
         margin-left: 30px;
         width: 330px;
         margin-right: 0px;
