@@ -12,6 +12,7 @@ class ImageStore {
         this.inputValue = text;
     }
 
+    //disabled
     @action async setPage() {
         const url = `https://api.unsplash.com/search/photos?query=${this.inputValue}&client_id=${this.ACCESS_KEY}`;
         const rawData = await fetch(url);
@@ -30,7 +31,6 @@ class ImageStore {
         try {
             const rawImages = await fetch(url);
             const jsonImages = await rawImages.json();
-            console.log(jsonImages)
             let imagesLinks = jsonImages.results.map(el => el.urls.regular);
             runInAction(() => {
                 this.links.replace(imagesLinks);
